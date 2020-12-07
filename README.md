@@ -1,4 +1,164 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
+sudo npm install -g gatsby-cli
+
+gatsby new <project-name>
+
+gatsby new <project-name> <starter-library-url>
+
+> gatsby new my-gatsby-project https://github.com/gatsbyjs/gatsby-starter-hello-world
+
+gatsby develop
+
+# .module.css
+
+.page {
+background: green;
+}
+
+.page h1 {
+color: orange;
+}
+
+.text {
+text-transform: capitalize;
+}
+
+className={styles.page}
+
+# styled-components
+
+npm install gatsby-plugin-styled-components styled-components babel-plugin-styled-components
+
+#gatsby-config.js
+
+module.exports = {
+siteMetadata: {
+title: "Project Title",
+description: "some description...",
+author: "JAP",
+data: ["item 1", "item 2", "item 3"],
+person: { name: "JAP", age: 369 },
+},
+/_ Your site config here _/
+plugins: [`gatsby-plugin-styled-components`],
+}
+
+#source-filesystem
+npm install gatsby-source-filesystem
+
+{
+allFile(limit:2) {
+nodes{
+size
+birthTime
+absolutePath
+}
+}
+}
+
+{
+allFile(skip:2
+) {
+nodes{
+size
+birthTime
+absolutePath
+}
+}
+}
+
+{
+allFile(sort:{fields:size, order:DESC}) {
+nodes{
+size
+birthTime
+absolutePath
+}
+}
+}
+
+{
+"data": {
+"allFile": {
+"nodes": [
+{
+"size": 375443,
+"birthTime": "2020-12-07T08:29:39.156Z",
+"absolutePath": "/Users/jonathanpaita/web-development/gatsby/taps-and-bites/src/images/copy/img5.jpeg"
+},
+{
+"size": 905528,
+"birthTime": "2020-12-07T08:29:28.592Z",
+"absolutePath": "/Users/jonathanpaita/web-development/gatsby/taps-and-bites/src/images/copy/img4.jpeg"
+}
+]
+}
+},
+"extensions": {}
+
+}
+query MyQuery {
+allFile(limit: 4, skip: 2) {
+nodes {
+birthTime
+absolutePath
+size
+}
+}
+}
+
+query MyQuery {
+allFile(limit: 4, skip: 2) {
+nodes {
+birthTime
+absolutePath
+size
+}
+}
+}
+
+{
+file(relativePath: {eq: "copy/img4.jpeg"}) {
+size
+relativePath
+}
+}
+
+query MyQuery {
+allFile(filter: {sourceInstanceName: {eq: "posts"}}) {
+totalCount
+nodes {
+absolutePath
+size
+}
+}
+}
+
+{
+fixed: file(relativePath: {eq: "img3.jpeg"}) {
+childImageSharp {
+fixed (width:300, height:400){
+src
+}
+}
+}
+fluid: file(relativePath: {eq: "img2.jpeg"}) {
+childImageSharp {
+fluid {
+src
+}
+}
+}
+}
+
+
+
+https://www.contentful.com/
+
+npm install gatsby-source-contentful
+
+
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
