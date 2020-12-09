@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../examples/Header"
 import HeaderStatic from "../examples/HeaderStatic"
-import Layout from "../components/layout"
+import Layout from "../layout"
 import { graphql } from "gatsby"
 
 const examples = ({ data }) => {
